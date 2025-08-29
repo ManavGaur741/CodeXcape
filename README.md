@@ -1,4 +1,4 @@
-# 📖 OS Learning Hub  
+# 📖 CodeXcape 
 *A Modern Platform for Learning Operating Systems Interactively*
 
 ---
