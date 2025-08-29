@@ -3,12 +3,13 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Set the static directory to 'codexcape'
-app.use(express.static(path.join(__dirname, 'CodeXcape')));
+// Set the static directory to the current folder where this file is located.
+// This assumes server.js is inside the 'CodeXcape' folder.
+app.use(express.static(__dirname));
 
 // Serve login.html for the root URL
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'CodeXcape', 'login.html'));
+  res.sendFile(path.join(__dirname, 'login.html'));
 });
 
 app.listen(port, () => {
