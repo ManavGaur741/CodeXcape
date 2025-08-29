@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex-Cape - Question</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('fourth.png');
+            background-size: 90% auto;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-family: sans-serif;
+            color: white;
+            padding-bottom: 50px;
+            text-align: center;
+            background-repeat: no-repeat;
+        }
+                /* Adjustments for font sizes */
+        #question-text {
+            font-size: 1.5em; /* Increase font size of the question */
+        }
+        
+        #answer-form p {
+            font-size: 0.8em; /* Decrease font size of "Type your answer below" */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="intro-box">
+        <h3 id="question-text"></h3>
+        <p>Type your answer below:</p>
+        <form id="answer-form">
+            <div class="input-group">
+                <input type="text" id="answer-input" placeholder="Your Answer" required>
+            </div>
+            <button type="submit" id="submit-answer-button" class="play-game-button">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        const beginnerQuestions = [
+            { question: "Print all even numbers from 1 to 100 using a for loop.", answer: "solved" },
+            { question: "Find the sum of all odd numbers between 1 and n using a while loop.", answer: "solved" },
+            { question: "Print Fibonacci sequence up to n terms using a loop.", answer: "solved" },
+            { question: "Reverse a number (12345 -> 54321).", answer: "solved" },
+            { question: "Print multiplication table of n.", answer: "solved" },
+            { question: "Count digits in a positive integer.", answer: "solved" },
+            { question: "Check if a number is palindrome using a loop.", answer: "solved" },
+            { question: "Factorial of a number using a loop.", answer: "solved" },
+            { question: "Print all primes between 1 and 100.", answer: "solved" },
+            { question: "Find GCD using Euclidean algorithm.", answer: "solved" },
+            { question: "Check if year is leap year.", answer: "solved" },
+            { question: "Check if number is positive/negative/zero.", answer: "solved" },
+            { question: "Find largest of three numbers.", answer: "solved" },
+            { question: "Check vowel/consonant.", answer: "solved" },
+            { question: "Check divisibility by 3 and 5.", answer: "solved" },
+            { question: "Simple calculator using switch.", answer: "solved" },
+            { question: "Check if triangle valid with 3 angles.", answer: "solved" },
+            { question: "Assign grades A,B,C.", answer: "solved" },
+            { question: "Even or odd without modulo.", answer: "solved" },
+            { question: "Check valid email.", answer: "solved" },
+            { question: "Find max element in array.", answer: "solved" },
+            { question: "Reverse array in place.", answer: "solved" },
+            { question: "Sum of all array elements.", answer: "solved" },
+            { question: "Count frequency of elements.", answer: "solved" },
+            { question: "Rotate array left by k.", answer: "solved" },
+            { question: "Check if array sorted.", answer: "solved" },
+            { question: "Find second smallest element.", answer: "solved" },
+            { question: "Remove duplicates in sorted array.", answer: "solved" },
+            { question: "Merge two sorted arrays.", answer: "solved" },
+            { question: "Linear search element index.", answer: "solved" },
+            { question: "Reverse string.", answer: "solved" },
+            { question: "Check string palindrome.", answer: "solved" },
+            { question: "Count vowels in string.", answer: "solved" },
+            { question: "Convert string to uppercase.", answer: "solved" },
+            { question: "First non-repeating char.", answer: "solved" },
+            { question: "Check two strings are anagrams.", answer: "solved" },
+            { question: "Replace spaces with _.", answer: "solved" },
+            { question: "Count occurrence of char.", answer: "solved" },
+            { question: "Remove vowels from string.", answer: "solved" },
+            { question: "Find length of longest word.", answer: "solved" },
+            { question: "Fix sum of array bug (off-by-one).", answer: "solved" },
+            { question: "Fix infinite loop in prime check.", answer: "solved" },
+            { question: "Fix string reverse bug.", answer: "solved" },
+            { question: "Fix palindrome logic.", answer: "solved" },
+            { question: "Fix max element bug.", answer: "solved" },
+            { question: "Fix leap year bug.", answer: "solved" },
+            { question: "Fix array out-of-bounds crash.", answer: "solved" },
+            { question: "Fix vowel counting bug.", answer: "solved" },
+            { question: "Fix merge arrays bug.", answer: "solved" },
+            { question: "Fix loop skipping elements bug.", answer: "solved" }
+        ];
+
+        const randomQuestion = beginnerQuestions[Math.floor(Math.random() * beginnerQuestions.length)];
+        document.getElementById('question-text').textContent = randomQuestion.question;
+
+        document.getElementById('answer-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userAnswer = document.getElementById('answer-input').value.trim();
+
+            if (userAnswer.toLowerCase() === randomQuestion.answer.toLowerCase()) {
+                window.location.href = 'game3.html'; // Redirect to the 5th slide
+            } else {
+                alert('Incorrect answer. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

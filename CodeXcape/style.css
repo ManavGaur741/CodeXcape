@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.background-container {
+    background-image: url('first.jpg');
+    background-size: 90vw auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.login-container {
+    position: absolute;
+    bottom: 150px;
+    right: 350px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: auto;
+}
+
+.login-box h2 {
+    color: white;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 280px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background: white;
+}
+
+.play-game-button {
+    background-color: #6a11cb;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.play-game-button:hover {
+    background-color: #2575fc;
+    transform: translateY(-2px);
+}
+
+.intro-box {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px; 
+    padding: 30px; 
+    width: 400px; /* This makes the box a fixed size like the login box */
+    height: auto; 
+    text-align: center;
+    color: white; 
+    position: absolute;
+    bottom: 300px;
+    left: 600px; /* This positions the box in the bottom-left corner */
+}
+
+.intro-box p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+body {
+    background-size: 90% auto;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    font-family: sans-serif;
+    color: white; 
+    padding-bottom: 50px;
+    text-align: center;
+}
