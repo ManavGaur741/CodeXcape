@@ -1,10 +1,10 @@
 # 📖 CodeXcape 
-*A Modern Platform for Learning Operating Systems Interactively*
+*A Modern Platform for Learning programming Interactively*
 
 ---
 
 ## 🚀 Project Description  
-OS Learning Hub is a **web-based learning platform** designed to simplify complex concepts of Operating Systems through structured chapters, an interactive login system, and a clean UI.  
+CodeXcape is a **web-based learning platform** designed to simplify complex concepts of programming through structured chapters, an interactive login system, and a clean UI.  
 The goal is to create an **easy-to-understand, chapter-wise learning experience** for students, developers, and enthusiasts who want to explore the fundamentals of Operating Systems.
 
 Future versions will include:  
